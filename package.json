@@ -4,12 +4,13 @@
   "description": "exercises 9.1 - 9.7",
   "main": "index.js",
   "scripts": {
-	"calculateBmi": "ts-node bmiCalculator.ts",
-	"calculateExercises": "ts-node exerciseCalculator.ts"
+    "calculateBmi": "ts-node bmiCalculator.ts",
+    "calculateExercises": "ts-node exerciseCalculator.ts"
   },
   "author": "Mikko Himanka",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^13.13.4",
     "ts-node": "^8.9.1",
     "typescript": "^3.8.3"
   }

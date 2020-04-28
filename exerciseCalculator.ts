@@ -30,4 +30,19 @@ const calculateExercises = (hours: Array<number>, target: number): Result => {
 		ratingDescription: ratingDescription
 	};
 };
-calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 5);
+
+const runCalculateExercises = () => {
+	let cmd = process.argv;
+	if (cmd.length <= 4) console.log('ERROR: Period length must be at least two days long!');
+	else if (cmd.filter(x => isNaN(+x)).length > 2) console.log('ERROR: Arguments can only be numbers!');
+	else {
+		let numbers = cmd.filter(x => !isNaN(+x)).map(x => +x);
+		let target = numbers.shift();
+		console.log(calculateExercises(numbers, target));
+	}
+
+}
+
+runCalculateExercises();
+
+//calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 5);
