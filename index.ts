@@ -21,7 +21,7 @@ app.get('/bmi', (req, res) => {
 			height: req.query.height,
 			bmi: bmi(+req.query.height, +req.query.weight)
 		});
-	};
+	}
 });
 
 const PORT = 3001;
