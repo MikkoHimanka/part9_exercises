@@ -9,11 +9,13 @@ const calculateBmi = (h: number, w: number): string => {
 	} else return 'Obese'
 }
 
-const runCalculateBmi = () => {
+const runCalculateBmi = (): string => {
 	let cmd = process.argv;
-	if (cmd.length !== 4) console.log('ERROR: Wrong number of arguments detected!');
-	else if (isNaN(+cmd[2]) || isNaN(+cmd[3])) console.log('ERROR: Arguments must be numbers!');
-	else console.log(calculateBmi(+cmd[2], +cmd[3]));
+	if (cmd.length !== 4) return ('ERROR: Wrong number of arguments detected!');
+	else if (isNaN(+cmd[2]) || isNaN(+cmd[3])) return ('ERROR: Arguments must be numbers!');
+	else return (calculateBmi(+cmd[2], +cmd[3]));
 }
 
-runCalculateBmi();
+console.log(runCalculateBmi());
+
+export default calculateBmi;

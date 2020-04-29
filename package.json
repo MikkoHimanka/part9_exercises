@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "calculateBmi": "ts-node bmiCalculator.ts",
-    "calculateExercises": "ts-node exerciseCalculator.ts"
+	"calculateExercises": "ts-node exerciseCalculator.ts",
+	"start": "ts-node index.ts",
+	"dev": "ts-node-dev index.ts"
   },
   "author": "Mikko Himanka",
   "license": "ISC",
@@ -14,6 +16,7 @@
     "@types/node": "^13.13.4",
     "express": "^4.17.1",
     "ts-node": "^8.9.1",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   }
 }
